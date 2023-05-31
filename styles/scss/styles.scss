@@ -1,0 +1,691 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+
+// ## Colors
+
+// ### Primary
+
+$Soft-red: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$Dark-desaturated-cyan: hsl(167, 40%, 24%);
+$Dark-blue: hsl(198, 62%, 26%);
+$Dark-moderate-cyan: hsl(168, 34%, 41%);
+
+// ### Neutral
+
+$Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$Very-dark-grayish-blue: hsl(213, 9%, 39%);
+$Dark-grayish-blue: hsl(232, 10%, 55%);
+$Grayish-blue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
+
+// ### Fonts
+
+$barlow: "Barlow", sans-serif;
+$fraunces: "Fraunces", serif;
+
+* {
+  padding: 0px;
+  margin: 0px;
+
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $barlow;
+  font-size: 100%;
+  font-weight: 600;
+}
+
+body {
+  background-color: black;
+  height: max-content;
+}
+
+/* ---------- *\
+-- Title
+\* ---------- */
+
+.title {
+  font-family: $fraunces;
+  font-weight: 700;
+}
+
+.title.is-1 {
+  font-size: 3.5em;
+  font-weight: 900;
+  letter-spacing: 10px;
+  color: $White;
+  text-transform: uppercase;
+}
+.title.is-2 {
+  font-size: 2.2em;
+  font-weight: 900;
+  color: $Very-dark-desaturated-blue;
+}
+.title.is-3 {
+  font-size: 1.9em;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.title.is-4 {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.title.is-5 {
+  font-size: 1.4em;
+  font-weight: 900;
+}
+/* ---------- *\
+-- Header
+\* ---------- */
+header {
+  width: 100%;
+  height: 95vh;
+
+  background-image: url("/images/desktop/image-header.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  
+}
+
+.navbar {
+  width: 100%;
+
+  height: 20%;
+  max-height: 150px;
+
+  padding: 0px 20px;
+
+  display: flex;
+  align-items: center;
+
+  
+}
+.navbar * {
+  color: $White;
+}
+.navbar > * {
+  flex-grow: 1;
+
+  display: flex;
+}
+.navbar > .navbar-start {
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 30px;
+}
+.navbar-start img {
+  height: 30px;
+  width: auto;
+}
+.navbar > .navbar-end {
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 30px;
+}
+.navbar-end > .navbar-item {
+  font-weight: 1em;
+  padding: 0px 25px;
+  cursor: pointer;
+}
+.burger {
+  display: none;
+}
+
+.hero {
+  width: 100%;
+  height: 80%;
+  padding-top: 15vh;
+
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+
+  
+}
+.hero img {
+  margin-top: 15vh;
+  width: 30px;
+}
+
+button.button {
+  color: $Very-dark-desaturated-blue;
+  background-color: $White;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 25px;
+
+  font-family: $fraunces;
+  text-transform: uppercase;
+
+  transition: 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+button.button:hover {
+  color: white;
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+
+/* ---------- *\
+-- Navbar Mobile
+\* ---------- */
+
+header > .navbar-mobile {
+  
+  position: absolute;
+  top: 85px;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  transition: 300ms ease;
+  opacity: 1;
+  z-index: 5;
+}
+
+header > .navbar-mobile.hide {
+  opacity: 0;
+  z-index: -1;
+}
+
+header > .navbar-mobile > div  {
+  position: relative;
+  background-color: $White;
+  width: 100%;
+  margin: 25px;
+  height: 43vh;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+#triangle {
+  position: absolute;
+  color: $White;
+  top: -25px;
+  right: 0px;
+
+  font-size: 60px;
+  transform: rotate(180deg);
+}
+header > .navbar-mobile > div > * {
+  height: 20%;
+  color: $Dark-grayish-blue;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+header > .navbar-mobile > div button {
+  background-color: $Yellow;
+  border-radius: 50px;
+  font-size: 0.9em;
+  margin: 0;
+  margin-top: 10px;
+  cursor: pointer;
+}
+header > .navbar-mobile > div button:hover {
+  background-color: $Yellow;
+  color: $Dark-blue;
+}
+
+/* ---------- *\
+-- Section
+\* ---------- */
+
+body > section {
+  display: flex;
+}
+body > section.reverse {
+  flex-direction: row-reverse;
+}
+body > section > * {
+  flex-grow: 1;
+  min-width: 50%;
+  height: 45vw;
+  
+}
+
+body > section > .banner {
+  background-color: $White;
+  width: 100%;
+  height: inherit;
+
+  padding: 0px 10%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+body > section > .banner > * {
+  padding: 20px 0px;
+}
+
+body > section > .banner p {
+  color: $Dark-grayish-blue;
+  line-height: 1.5em;
+}
+
+body > section > .banner > .link {
+  display: block;
+}
+
+body > section > .banner > .link > .learn-more {
+  position: relative;
+
+  text-decoration: none;
+  color: $Very-dark-desaturated-blue;
+  font-family: $fraunces;
+  font-weight: 900;
+  text-transform: uppercase;
+  z-index: 1;
+  padding: 0px 6px;
+
+  display: inline-flex;
+  justify-content: center;
+
+  transition: 250ms ease-in-out;
+}
+
+body > section > .banner > .link > .learn-more::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  bottom: -1px;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  opacity: 0.3;
+
+  transition: 300ms ease-in-out;
+}
+
+body > section > .banner > .link > .learn-more:hover::before {
+  opacity: 1;
+}
+body > section > .banner > .link > .learn-more.egg::before {
+  background-color: $Yellow;
+}
+body > section > .banner > .link > .learn-more.cup::before {
+  background-color: $Soft-red;
+}
+
+body > section > .banner-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body > section.photography > * {
+  display: flex;
+  padding: 28% 10% 0px 10%;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+body > section.photography > * > * {
+  padding: 15px 0px;
+}
+body > section.photography > * > p {
+  line-height: 1.5em;
+}
+body > section.photography > #cherry > * {
+  color: $Dark-desaturated-cyan;
+}
+body > section.photography > #orange > * {
+  color: $Dark-blue;
+}
+
+#egg {
+  background-image: url("/images/desktop/image-transform.jpg");
+}
+#cup {
+  background-image: url("/images/desktop/image-stand-out.jpg");
+}
+#cherry {
+  background-image: url("/images/desktop/image-graphic-design.jpg");
+}
+#orange {
+  background-image: url("/images/desktop/image-photography.jpg");
+}
+
+/* ---------- *\
+-- Testimonails
+\* ---------- */
+
+body > .testimonials {
+  width: 100%;
+  height: 100vh;
+  max-height: 700px;
+  background-color: $White;
+
+  display: flex;
+  flex-direction: column;
+}
+
+body > .testimonials > * {
+  flex-grow: 1;
+}
+body > .testimonials > .testimonials-head {
+  max-height: 23%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 2%;
+}
+body > .testimonials > .testimonials-head > * {
+  text-transform: uppercase;
+  color: $Grayish-blue;
+  letter-spacing: 6px;
+}
+body > .testimonials > .testimonials-body {
+  display: flex;
+  justify-content: center;
+}
+.testimonials-body > .testimonials-item {
+  padding: 10px;
+  max-width: 25%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonials-body > .testimonials-item > * {
+  margin: 30px 0px;
+}
+.testimonials-body > .testimonials-item > p {
+  line-height: 1.7em;
+  padding: 0px 20px;
+  text-align: center;
+  color: $Very-dark-grayish-blue;
+}
+.testimonials-body > .testimonials-item > div {
+  margin-top: 10px;
+  text-align: center;
+}
+.testimonials-body > .testimonials-item > div > * {
+  padding: 7px 0px;
+  color: $Grayish-blue;
+}
+.testimonials-body > .testimonials-item > div > .title {
+  color: $Very-dark-desaturated-blue;
+}
+.testimonials-body > .testimonials-item > img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50px;
+}
+
+/* ---------- *\
+-- Gallery
+\* ---------- */
+
+.gallery {
+  display: flex;
+  width: 100%;
+  height: 50vh;
+  background-color: $White;
+}
+
+.gallery > * {
+  flex-grow: 1;
+  max-width: 25%;
+}
+
+.gallery > .gallery-item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gallery > #gallery-milkbottles {
+  background-image: url("/images/desktop/image-gallery-milkbottles.jpg");
+}
+
+.gallery > #gallery-orange {
+  background-image: url("/images/desktop/image-gallery-orange.jpg");
+}
+
+.gallery > #gallery-cone {
+  background-image: url("/images/desktop/image-gallery-cone.jpg");
+}
+
+.gallery > #gallery-sugar {
+  background-image: url("/images/desktop/image-gallery-sugarcubes.jpg");
+}
+
+/* ---------- *\
+-- Footer
+\* ---------- */
+
+footer {
+  width: 100%;
+  height: 350px;
+  background-color: #90d4c5;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer > * {
+  padding: 20px 0px;
+}
+footer > .footer-logo > img {
+  opacity: 0.9;
+  height: 30px;
+}
+footer > .footer-links > .link {
+  text-decoration: none;
+  color: $Dark-moderate-cyan;
+  padding: 0px 25px;
+
+  transition: 100ms;
+}
+footer > .footer-links > .link:hover {
+  color: $White;
+}
+
+footer > .contacts {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+footer > .contacts > * {
+  display: block;
+  margin: 10px 15px;
+  color: $Dark-desaturated-cyan;
+  font-size: 1.5em;
+  transition: 100ms;
+}
+
+footer > .contacts > *:hover {
+  color: $White;
+}
+
+.attribution {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 0px;
+  font-size: 11px;
+  text-align: center;
+
+  color: $Dark-desaturated-cyan;
+  padding: 2px;
+  transition: 300ms ease-out;
+}
+.attribution:hover {
+  background-color: hsla(0, 0%, 100%, 1);
+}
+.attribution a {
+  color: $Very-dark-desaturated-blue;
+}
+
+@media screen and (min-width: 791px) and (max-width: 900px) {
+  html {
+    font-size: 80%;
+  }
+  .title.is-1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .title.is-2 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 240px) and (max-width:790px) {
+  .title.is-1 {
+    font-size: 2.3em;
+    text-align: center;
+    letter-spacing: 5px;
+  }
+  .title.is-2 {
+    font-size: 2em;
+  }
+  .title.is-4 {
+    font-size: 1em;
+  }
+  .title.is-5 {
+    font-size: 1.2em;
+  }
+  header {
+    height: max-content;
+    background-image: url("/images/mobile/image-header.jpg");
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar {
+    height: 90px;
+    padding: 20px;
+  }
+  .navbar > .navbar-start {
+    padding: 0px;
+  }
+  .navbar-start img {
+    height: 25px;
+    width: auto;
+  }
+  .navbar > .navbar-end {
+    padding: 0px;
+  }
+  .navbar-end > .navbar-item {
+    display: none;
+  }
+  .navbar-end > .burger {
+    position: relative;
+    top: -3px;
+    display: block;
+    height: 18px;
+    margin: 0px 5px;
+  }
+  .hero {
+    flex-grow: 1;
+    padding: 15% 0px 40% 0px;
+  }
+  .hero img {
+    
+    margin-top: 50px;
+    width: 30px;
+  }
+
+  body > section {
+    flex-direction: column-reverse;
+  }
+  body > section.reverse {
+    flex-direction: column-reverse;
+  }
+  body > section > * {
+    min-width: none;
+    min-height: 100vw;
+    height: max-content;
+  }
+  body > section > .banner {
+    background-color: $White;
+    width: 100%;
+    height: 55vh;
+  }
+  body > section > .banner > * {
+    text-align: center;
+  }
+  body > section.photography {
+    flex-direction: column;
+  }
+  body > section.photography > * {
+    justify-content: flex-end;
+    padding: 40px 10%;
+    height: 70vh;
+    min-height: 500px;
+  }
+  body > .testimonials {
+    height: max-content;
+    max-height: none;
+    padding-top: 5px;
+    padding-bottom: 40px;
+  }
+  body > .testimonials > .testimonials-body {
+    flex-direction: column;
+  }
+  .testimonials-body > .testimonials-item {
+    padding: 10px;
+    max-width: none;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body > .testimonials > .testimonials-head {
+    padding: 55px 0px 30px 0px;
+    margin-bottom: 0px;
+  }
+  body > .testimonials > .testimonials-head > * {
+    letter-spacing: 4px;
+  }
+  .testimonials-body > .testimonials-item > * {
+    margin: 20px 0px;
+  }
+  .testimonials-body > .testimonials-item > p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+  }
+  .testimonials-body > .testimonials-item > div {
+    font-size: 0.9em;
+  }
+  .testimonials-body > .testimonials-item > div {
+    padding: 5px 0px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 50vw;
+
+    height: 100vw;
+  }
+
+  .gallery > * {
+    max-width: none;
+  }
+
+  footer > .footer-links > .link {
+    font-size: 1.1em;
+  }
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+    <!-- stylesheet 👍 -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="https://kit.fontawesome.com/c036512f7c.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <nav class="navbar">
+        <div class="navbar-start">
+          <img src="./images/logo.svg" alt="Logo Sunnyside’s" />
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">About</div>
+          <div class="navbar-item">Services</div>
+          <div class="navbar-item">Projects</div>
+          <div class="navbar-item">
+            <button class="button">Contact</button>
+          </div>
+
+          <img id="burger" src="./images/icon-hamburger.svg" class="burger" />
+        </div>
+      </nav>
+      <div class="navbar-mobile hide">
+        <div>
+          <i id="triangle" class="fa-solid fa-play"></i>
+          <div class="navbar-item">About</div>
+          <div class="navbar-item">Services</div>
+          <div class="navbar-item">Projects</div>
+          <div class="navbar-item">
+            <button class="button">Contact</button>
+          </div>
+        </div>
+      </div>
+      <div class="hero">
+        <h1 class="title is-1">We are creatives</h1>
+        <img src="./images/icon-arrow-down.svg" alt="arrow down" />
+      </div>
+    </header>
+
+    <!-- Section Banner -->
+    <section>
+      <div class="banner">
+        <div class="title is-2">Transform your brand</div>
+
+        <p>
+          We are a full-service creative agency specializing in helping brands
+          grow fast. Engage your clients through compelling visuals that do most
+          of the marketing for you.
+        </p>
+
+        <div class="link">
+          <a class="learn-more egg" href="#">Learn more</a>
+        </div>
+      </div>
+      <div id="egg" class="banner-image"></div>
+    </section>
+    <section class="reverse">
+      <div class="banner">
+        <div class="title is-2">Stand out to the right audience</div>
+
+        <p>
+          Using a collaborative formula of designers, researchers,
+          photographers, videographers, and copywriters, we’ll build and extend
+          your brand in digital places.
+        </p>
+
+        <div class="link">
+          <a class="learn-more cup" href="#">Learn more</a>
+        </div>
+      </div>
+      <div id="cup" class="banner-image"></div>
+    </section>
+
+    <!-- Section Photography -->
+    <section class="photography">
+      <div id="cherry" class="banner-image">
+        <div class="title is-3">Graphic design</div>
+        <p>
+          Great design makes you memorable. We deliver artwork that underscores
+          your brand message and captures potential clients’ attention.
+        </p>
+      </div>
+      <div id="orange" class="banner-image">
+        <div class="title is-3">Photography</div>
+        <p>
+          Increase your credibility by getting the most stunning, high-quality
+          photos that improve your business image.
+        </p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <div class="testimonials">
+      <div class="testimonials-head">
+        <div class="title is-4">Client testimonials</div>
+      </div>
+      <div class="testimonials-body">
+        <div class="testimonials-item">
+          <img src="./images/image-emily.jpg" alt="Emily Profile Picture" />
+          <p>
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <div>
+            <div class="title is-5">Emily R.</div>
+            <div>Marketing Director</div>
+          </div>
+        </div>
+        <div class="testimonials-item">
+          <img src="./images/image-thomas.jpg" alt="Thomas Profile Picture" />
+          <p>
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <div>
+            <div class="title is-5">Thomas S.</div>
+            <div>Chief Operating Officer</div>
+          </div>
+        </div>
+        <div class="testimonials-item">
+          <img src="./images/image-jennie.jpg" alt="Jennie F Profile Picture" />
+          <p>
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <div>
+            <div class="title is-5">Jennie F.</div>
+            <div>Business Owner</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery">
+      <div id="gallery-milkbottles" class="gallery-item"></div>
+      <div id="gallery-orange" class="gallery-item"></div>
+      <div id="gallery-cone" class="gallery-item"></div>
+      <div id="gallery-sugar" class="gallery-item"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-logo">
+        <img src="./images/logo-footer.svg" alt="Logo Sunnyside’s" />
+      </div>
+      <div class="footer-links">
+        <a class="link" href="#">About</a>
+        <a class="link" href="#">Services</a>
+        <a class="link" href="#">Projects</a>
+      </div>
+      <div class="contacts">
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-square-twitter"></i>
+        <i class="fa-brands fa-square-pinterest"></i>
+      </div>
+    </footer>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://instagram.com/yusufbagus_s" target="_blank">Ryuzen Namikaze</a>.
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
